@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Prediction</title>
+
+</head>
+<body>
+    <div class="start">
+        <h1>Cancer Risk Level Prediction</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <input type="number" name="Age" placeholder="Age" required="required" />
+            <input type="text" name="Gender" placeholder="Gender" required="required" />
+            <input type="number" name="Air Pollution" placeholder="Air Pollution Level" required="required" />
+            <input type="number" name="Alcohol use" placeholder="Alchol use level" required="required" />
+            <input type="number" name="Dust Allergy" placeholder="Dust Allergy level" required="required" />
+            <input type="number" name="OccuPational Hazards" placeholder="OccuPational Hazards level" required="required" />
+            <input type="number" name="Genetic Risk" placeholder="Genetic Risk level" required="required" />
+            <input type="number" name="chronic Lung Disease" placeholder="chronic Lung Disease level" required="required" />
+            <input type="number" name="Balanced Diet" placeholder="Balanced Diet level" required="required" />
+            <input type="number" name="Obesity" placeholder="Obesity level" required="required" />
+            <input type="number" name="Smoking" placeholder="Smoking level" required="required" />
+            <input type="number" name="Passive Smoker" placeholder="Passive Smoker level" required="required" />
+            <input type="number" name="Chest Pain" placeholder="Chest Pain level" required="required" />
+            <input type="number" name="Coughing of Blood" placeholder="Coughing of Blood level" required="required" />
+            <input type="number" name="Fatigue" placeholder="Fatigue level" required="required" />
+            <input type="number" name="Weight Loss" placeholder="Weight Loss level" required="required" />
+            <input type="number" name="Shortness of Breath" placeholder="Shortness of Breath level" required="required" />
+            <input type="number" name="Wheezing" placeholder="Wheezing level" required="required" />
+            <input type="number" name="Swallowing Difficulty" placeholder="Swallowing Difficulty level" required="required" />
+            <input type="number" name="Clubbing of Finger Nails" placeholder="Clubbing of Finger Nails level" required="required" />
+            <input type="number" name="Frequent Cold" placeholder="Frequent Cold level" required="required" />
+            <input type="number" name="Dry Cough" placeholder="Dry Cough level" required="required" />
+            <input type="number" name="Snoring" placeholder="Snoring level" required="required" />
+            
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    
+       <br>
+       <br>
+       {{ prediction_text }}
+    
+       <p> Enter levels in the range of 0-7.</p>
+       <p> 1 stands for 'Mild' risk</p>
+       <p> 2 stands for 'Neutral' risk</p>
+       <p> 3 stands for 'High Risk' risk</p>
+       <p> Also, it is clearly stated that the predictions are not scientifically backed and have no proof of correctness.</p>
+       <p> It is soleley made for the purpose of learning and applying Machine Learning algorithms, enjoy!!!</p>
+       
+     </div>
+    
+    
+    
+</body>
+</html>

@@ -37,6 +37,6 @@ model = LogisticRegression(max_iter=100000)
 model.fit(x_train,y_train)
 
 print(model.score(x_train,y_train))
-# pickle.dump(model, open("model.pkl", "wb"))
+pickle.dump(model, open("model.pkl", "wb"))
 
 
